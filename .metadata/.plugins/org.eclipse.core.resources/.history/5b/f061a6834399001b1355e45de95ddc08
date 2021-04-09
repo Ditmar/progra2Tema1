@@ -1,0 +1,60 @@
+package contacts;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+
+public class ManagementContacts {
+	HashMap<String, Contact> table;
+	private String path = "C:\\Users\\Lobo_\\programacion2\\Example9\\file\\database.txt";
+	public ManagementContacts() {
+		table = new HashMap<>();
+	}
+	//añadir contactos al hashMap
+	public void addContact(Contact newcontact) {
+		//Insert Into file
+		try {
+			FileOutputStream ouput = new FileOutputStream(this.path);
+			PrintStream printFile = new PrintStream(ouput);
+			printFile.println(newcontact.getEmail() + 
+					"|" + newcontact.getName() + 
+					"|" + newcontact.getPhoneNumber() + 
+					"|" + newcontact.getAge());
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		//table.put(newcontact.getEmail(), newcontact);
+	}
+	/*public Contact searchContact2(String email) {
+		return table.get(email);
+	}*/
+	public ArrayList<Contact> searchContact(String name) {
+		ArrayList<Contact> result = new ArrayList<>();
+		Collection<Contact> list =  table.values();
+		for (Contact contact : list) {
+			if (contact.getName().toLowerCase().contains(name.toLowerCase())) {
+				result.add(contact);
+			}
+		}
+		return result;
+	}
+	public Contact removeContact(String email) {
+		return table.remove(email);
+	}
+	public void showContacts() {
+		Collection<Contact> listContact = table.values();
+		Integer number = 1;
+		for (Contact contact : listContact) {
+			System.out.println(number + ".-)" + contact.getName() 
+			+ " Email: " + contact.getEmail() + " " 
+			+ " Telefono: " + contact.getPhoneNumber() + " " 
+			+ " Edad: " + contact.getAge());
+			number++;
+		}
+ 	}
+}

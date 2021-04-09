@@ -1,0 +1,14 @@
+package contacts;
+
+public class Contact {
+	private String email;
+	private String name;
+	private Integer age;
+	private String phoneNumber;
+	public Contact(String email, String name, Integer age, String phoneNumber) {
+		this.email = email;
+		this.name = name;
+		this.age = age;
+		this.phoneNumber = phoneNumber;
+	}
+}

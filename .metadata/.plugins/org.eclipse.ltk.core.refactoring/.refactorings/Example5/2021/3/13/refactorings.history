@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;MangementGrades&apos; to &apos;ManagementGrades&apos;&#x0D;&#x0A;- Original project: &apos;Example5&apos;&#x0D;&#x0A;- Original element: &apos;MangementGrades&apos;&#x0D;&#x0A;- Renamed element: &apos;ManagementGrades&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;MangementGrades&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{MangementGrades.java[MangementGrades" matchStrategy="1" name="ManagementGrades" qualified="false" references="true" similarDeclarations="false" stamp="1617209780949" textual="false" version="1.0"/>
+</session>

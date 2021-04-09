@@ -1,0 +1,10 @@
+package contacts;
+
+import java.util.HashMap;
+
+public class ManagementContacts {
+	HashMap<String, Contact>
+	public ManagementContacts() {
+		
+	}
+}

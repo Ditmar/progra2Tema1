@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+import contacts.Contact;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner(System.in);
+		Integer option = -1;
+		Contact contact = new Contact("ditmar@gmail.com", "Ditmar", 27, 7845123);
+		do {
+			System.out.println("1.- Añadir Contacto");
+			System.out.println("2.- Buscar Contacto");
+			System.out.println("3.- Eliminar Contacto");
+			System.out.println("4.- Mostrar Todos");
+			System.out.println("5.- Salir");
+			option = Integer.parseInt(scanner.nextLine());
+			switch (option) {
+				case 1: {
+					
+					break;
+				}
+				case 2: {
+					
+					break;
+				}
+				case 3: {
+					
+					break;
+				}
+				case 4: {
+					
+					break;
+				}
+			}
+		} while (option != 5);
+		System.out.println("Terminado!");
+	}
+}

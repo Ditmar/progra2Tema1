@@ -1,0 +1,17 @@
+package contacts;
+
+import java.util.HashMap;
+
+public class ManagementContacts {
+	HashMap<String, Contact> table;
+	public ManagementContacts() {
+		table = new HashMap<>();
+	}
+	//añadir contactos al hashMap
+	public void addContact(Contact newcontact) {
+		table.put(newcontact.getEmail(), newcontact);
+	}
+	public Contact searchContact(String email) {
+		
+	}
+}

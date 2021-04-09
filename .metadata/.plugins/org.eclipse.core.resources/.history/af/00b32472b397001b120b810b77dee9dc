@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+import contacts.Contact;
+import contacts.ManagementContacts;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner(System.in);
+		Integer option = -1;
+		ManagementContacts managementContact = new ManagementContacts();
+		
+		do {
+			System.out.println("1.- Añadir Contacto");
+			System.out.println("2.- Buscar Contacto");
+			System.out.println("3.- Eliminar Contacto");
+			System.out.println("4.- Mostrar Todos");
+			System.out.println("5.- Salir");
+			option = Integer.parseInt(scanner.nextLine());
+			switch (option) {
+				case 1: {
+					System.out.println("Estas creando un Contacto");
+					System.out.println("Nombre");
+					String name = scanner.nextLine();
+					System.out.println("Email");
+					String email = scanner.nextLine();
+					System.out.println("Edad");
+					Integer age = Integer.parseInt(scanner.nextLine());
+					System.out.println("Telefono/Celular");
+					String phoneNumber = scanner.nextLine();
+					Contact contact = new Contact(email, name, age, phoneNumber);
+					managementContact.addContact(contact);
+					break;
+				}
+				case 2: {
+					//Buscar
+					System.out.println();
+					break;
+				}
+				case 3: {
+					
+					break;
+				}
+				case 4: {
+					
+					break;
+				}
+			}
+		} while (option != 5);
+		System.out.println("Terminado!");
+	}
+}

@@ -1,0 +1,6 @@
+package contacts;
+
+public class Contact {
+	private String email;
+	private String ename;
+}
